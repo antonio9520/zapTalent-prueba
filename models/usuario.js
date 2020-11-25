@@ -91,8 +91,8 @@ const UsuariosSchema = mongoose.Schema({
 });
 
 UsuariosSchema.methods.setImgUrl = function setImgUrl(filename) {
-  const { host, port } = appConfig;
-  this.imageURL = `${host}:${port}/public/${filename}`;
+  // const { host, port } = appConfig;
+  this.imageURL = `https://agile-river-22847.herokuapp.com/public/${filename}`;
 };
 
 module.exports = mongoose.model("Usuario", UsuariosSchema);
